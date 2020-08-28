@@ -50,4 +50,10 @@ public class FlightTest {
     public void canGetAvailableSeats() {
         assertEquals(250, flight.getSeats());
     }
+
+    @Test
+    public void canSetAvailableSeats() {
+        flight.setSeats(249);
+        assertEquals(249, flight.getSeats());
+    }
 }

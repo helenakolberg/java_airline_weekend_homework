@@ -13,7 +13,7 @@ public class FlightTest {
     public void before() {
         passenger = new Person("Arthur Apple", 2);
         plane = new Plane(PlaneType.BOEING812);
-        flight = new Flight(plane, "TLN4565", "TLN", "EDI", "06.55", 250);
+        flight = new Flight(plane, "TLN4565", "TLN", "EDI", "06.55");
     }
 
     @Test
@@ -54,6 +54,13 @@ public class FlightTest {
     @Test
     public void canSetAvailableSeats() {
         flight.setSeats(249);
+        assertEquals(249, flight.getSeats());
+    }
+
+    @Test
+    public void canBookPassenger() {
+        flight.bookPassenger(passenger);
+        assertEquals(1, flight.getNumOfPassengers());
         assertEquals(249, flight.getSeats());
     }
 }

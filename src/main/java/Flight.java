@@ -10,14 +10,14 @@ public class Flight {
     private String time;
     private int seats;
 
-    public Flight(Plane plane, String number, String destination, String departure, String time, int seats) {
+    public Flight(Plane plane, String number, String destination, String departure, String time) {
         this.passengers = new ArrayList<Person>();
         this.plane = plane;
         this.number = number;
         this.destination = destination;
         this.departure = departure;
         this.time = time;
-        this.seats = seats;
+        this.seats = plane.getCapacity();
     }
 
     public int getNumOfPassengers() {
@@ -50,5 +50,12 @@ public class Flight {
 
     public void setSeats(int seats) {
         this.seats = seats;
+    }
+
+    public void bookPassenger(Person passenger) {
+        if (this.seats > 0) {
+            this.passengers.add(passenger);
+            this.seats--;
+        }
     }
 }

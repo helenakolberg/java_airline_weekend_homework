@@ -25,4 +25,16 @@ public class Flight {
     public String getNumber() {
         return this.number;
     }
+
+    public String getDestination() {
+        return destination;
+    }
+
+    public String getDeparture() {
+        return departure;
+    }
+
+    public String getTime() {
+        return time;
+    }
 }

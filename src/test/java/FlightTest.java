@@ -18,4 +18,9 @@ public class FlightTest {
     public void passengersStartAtZero() {
         assertEquals(0, flight.getNumOfPassengers());
     }
+
+    @Test
+    public void canGetNumber() {
+        assertEquals("TLN4565", flight.getNumber());
+    }
 }

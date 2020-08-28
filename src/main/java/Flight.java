@@ -21,4 +21,8 @@ public class Flight {
     public int getNumOfPassengers() {
         return this.passengers.size();
     }
+
+    public String getNumber() {
+        return this.number;
+    }
 }

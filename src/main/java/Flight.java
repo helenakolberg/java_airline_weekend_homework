@@ -8,14 +8,16 @@ public class Flight {
     private String destination;
     private String departure;
     private String time;
+    private int seats;
 
-    public Flight(Plane plane, String number, String destination, String departure, String time) {
+    public Flight(Plane plane, String number, String destination, String departure, String time, int seats) {
         this.passengers = new ArrayList<Person>();
         this.plane = plane;
         this.number = number;
         this.destination = destination;
         this.departure = departure;
         this.time = time;
+        this.seats = seats;
     }
 
     public int getNumOfPassengers() {
@@ -42,7 +44,7 @@ public class Flight {
         return time;
     }
 
-    public int availableSeats() {
-        return this.plane.getCapacity();
+    public int getSeats() {
+        return seats;
     }
 }

@@ -7,11 +7,13 @@ public class FlightTest {
 
     Flight flight;
     Plane plane;
+    Person passenger;
 
     @Before
     public void before() {
+        passenger = new Person("Arthur Apple", 2);
         plane = new Plane(PlaneType.BOEING812);
-        flight = new Flight(plane, "TLN4565", "TLN", "EDI", "06.55");
+        flight = new Flight(plane, "TLN4565", "TLN", "EDI", "06.55", 250);
     }
 
     @Test
@@ -46,6 +48,6 @@ public class FlightTest {
 
     @Test
     public void canGetAvailableSeats() {
-        assertEquals(250, flight.availableSeats());
+        assertEquals(250, flight.getSeats());
     }
 }

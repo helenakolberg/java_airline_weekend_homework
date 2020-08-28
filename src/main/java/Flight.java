@@ -22,6 +22,10 @@ public class Flight {
         return this.passengers.size();
     }
 
+    public Plane getPlane() {
+        return this.plane;
+    }
+
     public String getNumber() {
         return this.number;
     }

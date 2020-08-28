@@ -20,6 +20,11 @@ public class FlightTest {
     }
 
     @Test
+    public void canGetPlane() {
+        assertEquals(plane, flight.getPlane());
+    }
+
+    @Test
     public void canGetNumber() {
         assertEquals("TLN4565", flight.getNumber());
     }

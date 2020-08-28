@@ -41,4 +41,8 @@ public class Flight {
     public String getTime() {
         return time;
     }
+
+    public int availableSeats() {
+        return this.plane.getCapacity();
+    }
 }

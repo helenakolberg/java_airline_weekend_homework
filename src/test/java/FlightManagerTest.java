@@ -33,4 +33,10 @@ public class FlightManagerTest {
         double baggageBooked = flightManager.baggageBooked(flight);
         assertEquals(200.0, baggageBooked, 0.01);
     }
+
+    @Test
+    public void canCalculateOverallRemainingBaggageAllowance() {
+        double remainingAllowance = flightManager.remainingAllowance(flight);
+        assertEquals(19800.0, remainingAllowance, 0.01);
+    }
 }

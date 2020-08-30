@@ -5,4 +5,8 @@ public class FlightManager {
         double allowancePerPassenger = totalAllowance / flight.getPlane().getCapacity();
         return allowancePerPassenger;
     }
+
+    public double baggageBooked(Flight flight) {
+        return this.baggageAllowancePerPassenger(flight) * flight.getNumOfPassengers();
+    }
 }

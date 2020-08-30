@@ -18,6 +18,8 @@ public class FlightManagerTest {
         flightManager = new FlightManager();
         passenger1 = new Person("Sam Smith", 2);
         passenger2 = new Person("Arthur Apple", 2);
+        flight.bookPassenger(passenger1);
+        flight.bookPassenger(passenger2);
     }
 
     @Test
@@ -26,9 +28,9 @@ public class FlightManagerTest {
         assertEquals(100.0, allowance, 0.01);
     }
 
-//    @Test
-//    public void canCalculateAmountOfBaggageBooked() {
-//        double baggageBooked = flightManager.baggageBooked(plane);
-//        assertEquals();
-//    }
+    @Test
+    public void canCalculateAmountOfBaggageBooked() {
+        double baggageBooked = flightManager.baggageBooked(flight);
+        assertEquals(200.0, baggageBooked, 0.01);
+    }
 }
